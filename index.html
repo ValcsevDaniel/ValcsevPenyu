@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Magán Szemészet Miskolc - Dr. Valcsev Penyu | Szemészeti Rendelés</title>
+    <meta name="description" content="Dr. Valcsev Penyu magán szemészeti szakrendelése Miskolcon. Teljeskörű szemészeti vizsgálat, glaucoma, diabetes, AMD gondozás, OCT vizsgálat, gyermekszemészet. Időpontfoglalás.">
+    <meta name="keywords" content="magán szemészet miskolc, szemészet miskolc, szemészeti rendelés, szemész szakorvos miskolc, szem vizsgálat miskolc, glaucoma miskolc, diabetes szemészet miskolc, OCT vizsgálat miskolc, gyermekszemészet miskolc, polateszt miskolc, Dr. Valcsev Penyu">
+    <!-- Add Schema.org markup here later if desired for advanced SEO -->
+
+    <style>
+        /* Basic Reset & Defaults */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px; /* Base font size */
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9; /* Light gray background overall */
+        }
+
+        /* Container */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: #ffffff;
+            padding: 1rem 0;
+            border-bottom: 1px solid #e0e0e0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            color: #0056b3; /* Professional blue */
+            margin: 0;
+             font-weight: 600;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin-left: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            padding: 8px 12px; /* Slightly larger padding */
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            background-color: #0056b3; /* Match button color on hover */
+            color: #ffffff;
+        }
+
+        /* Hero Section */
+        #hero {
+            background-color: #eef5fc; /* Light blue background like screenshot */
+            padding: 60px 0; /* More padding */
+            text-align: center; /* Center text by default */
+            border-bottom: 1px solid #d4e3f3;
+        }
+
+        #hero .hero-content {
+            display: flex;
+            flex-direction: column; /* Stack image and text on small screens */
+            align-items: center;
+            text-align: center;
+        }
+
+        #hero .hero-image-container {
+             margin-bottom: 30px; /* Space below image when stacked */
+        }
+
+        #hero img {
+            display: block; /* Remove extra space below image */
+            max-width: 220px; /* Slightly larger than before */
+            width: 100%; /* Responsive width */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 8px; /* Slightly rounded corners, not circle */
+            border: 4px solid #ffffff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            /* SEO/Speed: Add width/height attributes in HTML matching the *file's* dimensions */
+        }
+
+        #hero h2 {
+            font-size: 2.2rem; /* Larger headline */
+            color: #003d80; /* Darker blue */
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        #hero p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 30px;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background-color: #007bff; /* Standard blue */
+            color: #ffffff;
+            padding: 12px 30px; /* More horizontal padding */
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.05rem; /* Slightly larger font */
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 123, 255, 0.3);
+        }
+
+        .btn:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 86, 179, 0.4);
+        }
+
+        .btn-phone {
+            background-color: #28a745; /* Green for call button */
+             box-shadow: 0 2px 5px rgba(40, 167, 69, 0.3);
+        }
+        .btn-phone:hover {
+            background-color: #1e7e34;
+            box-shadow: 0 4px 8px rgba(30, 126, 52, 0.4);
+        }
+
+        /* General Section Styling */
+        section {
+            padding: 50px 0;
+        }
+
+        section:nth-of-type(even) { /* Alternate section background for contrast */
+             background-color: #ffffff;
+        }
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 40px; /* More space below heading */
+            font-size: 1.8rem;
+            color: #0056b3; /* Match header blue */
+             font-weight: 600;
+        }
+
+        /* Services Section - Accordion Style */
+        #szolgaltatasok details {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: margin 0.3s ease; /* Smooth open/close */
+        }
+         #szolgaltatasok details[open] {
+             margin-bottom: 20px; /* Slightly more space when open */
+        }
+
+        #szolgaltatasok summary {
+            padding: 15px 45px 15px 20px; /* More padding, space for icon */
+            font-weight: 600; /* Bolder summary */
+            font-size: 1.1rem;
+            cursor: pointer;
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #e0e0e0; /* Separator line */
+            position: relative; /* For arrow positioning */
+            list-style: none; /* Remove default marker */
+            transition: background-color 0.3s;
+             border-radius: 8px 8px 0 0; /* Rounded top corners */
+        }
+         #szolgaltatasok details[open] summary {
+            background-color: #e9ecef; /* Slightly darker when open */
+             border-bottom: 1px solid #d1d9e0;
+             border-radius: 8px 8px 0 0; /* Keep rounded top */
+        }
+        #szolgaltatasok details:not([open]) summary:hover {
+            background-color: #e2e6ea;
+        }
+
+        #szolgaltatasok summary::marker, /* Hide marker in Firefox */
+        #szolgaltatasok summary::-webkit-details-marker /* Hide marker in Chrome/Safari */ {
+             display: none;
+        }
+
+        /* Arrow indicator */
+        #szolgaltatasok summary::after {
+            content: '+';
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.6rem;
+            font-weight: 300; /* Lighter weight plus */
+            color: #007bff;
+            transition: transform 0.3s ease;
+        }
+
+        #szolgaltatasok details[open] summary::after {
+            content: '−'; /* Minus sign */
+            transform: translateY(-50%) rotate(180deg); /* Optional: Rotate plus */
+        }
+
+        #szolgaltatasok .service-content {
+            padding: 20px 25px; /* Consistent padding */
+             background-color: #ffffff; /* Ensure white background */
+             border-radius: 0 0 8px 8px; /* Rounded bottom corners */
+        }
+        #szolgaltatasok .service-content h4 {
+            margin-top: 15px;
+            margin-bottom: 5px;
+            color: #0056b3;
+        }
+        #szolgaltatasok .service-content ul {
+            list-style-position: outside; /* Standard list style */
+            padding-left: 25px; /* Indent list */
+            margin-top: 10px;
+             margin-bottom: 15px;
+        }
+         #szolgaltatasok .service-content ul li {
+             margin-bottom: 5px; /* Space between list items */
+        }
+
+        /* Pricing Section */
+        #arak {
+             background-color: #f0f8ff; /* Alice blue */
+        }
+        #arak h2 {
+             color: #003d80;
+        }
+         #arak small {
+            display: block;
+            text-align: center;
+            margin: -30px 0 30px 0; /* Adjust spacing */
+            font-style: italic;
+             color: #555;
+        }
+        #arak ul {
+            list-style: none;
+            max-width: 700px; /* Wider price list */
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 25px 30px; /* More padding */
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+        }
+        #arak li {
+            padding: 12px 0; /* More vertical space */
+            border-bottom: 1px solid #eee; /* Lighter dashed line */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap; /* Allow wrapping */
+        }
+        #arak li:last-child { border-bottom: none; }
+        #arak .price {
+            font-weight: bold;
+            color: #0056b3;
+            font-size: 1.1rem; /* Slightly larger price */
+            margin-left: 15px; /* Space between item and price */
+            white-space: nowrap; /* Prevent price wrapping */
+        }
+        #arak .discount-note {
+            font-size: 0.95rem;
+            color: #444;
+            margin-top: 25px; /* More space above note */
+            text-align: center;
+            padding: 15px;
+            background-color: #e9f5ff; /* Light blue background */
+            border: 1px solid #cce7ff; /* Blue border */
+            border-radius: 4px;
+            max-width: 700px; /* Match list width */
+            margin-left: auto;
+            margin-right: auto;
+        }
+         #arak .discount-note strong {
+             color: #0056b3;
+         }
+
+        /* Testimonials Section */
+        #velemenyek {
+             background-color: #ffffff; /* White background */
+        }
+        #velemenyek .testimonial {
+            background-color: #f8f9fa; /* Light gray background */
+            border: 1px solid #e0e0e0;
+            border-left: 5px solid #007bff; /* Blue accent */
+            padding: 25px; /* More padding */
+            margin: 0 auto 25px auto; /* Center testimonials */
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            max-width: 750px; /* Limit width */
+        }
+        #velemenyek blockquote {
+            margin: 0 0 15px 0; /* Space below quote */
+            font-style: italic;
+            color: #444; /* Darker text */
+            font-size: 1.05rem; /* Slightly larger quote text */
+             line-height: 1.7;
+        }
+        #velemenyek .author {
+            text-align: right;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #0056b3; /* Blue author name */
+        }
+         #velemenyek .placeholder-note {
+            text-align: center;
+            font-style: italic;
+            color: #777;
+            margin-top: 20px;
+        }
+
+        /* Contact Section */
+        #kapcsolat {
+             background-color: #eef5fc; /* Match hero background */
+             padding-bottom: 60px; /* More padding at bottom */
+        }
+        #kapcsolat .contact-flex-container { /* Use flex for layout */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start; /* Align items to top */
+            gap: 30px; /* Space between items */
+        }
+
+        #kapcsolat .contact-details, #kapcsolat .opening-hours {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+            text-align: left; /* Align text left within boxes */
+            flex: 1 1 300px; /* Allow flexing, base width 300px */
+            max-width: 400px; /* Max width */
+        }
+
+        #kapcsolat h3 {
+            margin-bottom: 20px;
+             color: #0056b3;
+             font-size: 1.4rem;
+             text-align: center; /* Center headings within boxes */
+        }
+
+        #kapcsolat p, #kapcsolat ul {
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+         #kapcsolat ul {
+             list-style: none; /* Remove bullets */
+             padding-left: 0;
+         }
+          #kapcsolat li {
+             margin-bottom: 8px; /* Space between hours */
+         }
+
+        #kapcsolat strong {
+            color: #333; /* Less emphasis than blue heading */
+             display: inline-block;
+             min-width: 50px; /* Align times */
+        }
+        #kapcsolat .label { /* Specific class for labels like Address, Phone */
+             display: block;
+             font-weight: bold;
+             margin-bottom: 5px;
+             color: #0056b3;
+        }
+
+
+        #kapcsolat .phone-link {
+            font-weight: bold;
+            color: #28a745; /* Green phone number */
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+         #kapcsolat .phone-link:hover {
+            text-decoration: underline;
+        }
+
+        #kapcsolat .appointment-info {
+             text-align: center;
+             margin-top: 15px;
+             font-style: italic;
+             color: #555;
+             width: 100%; /* Span full width in flex container */
+             flex-basis: 100%; /* Ensure it takes full row if wrapping */
+        }
+        #kapcsolat .appointment-button-container {
+            text-align: center;
+            margin-top: 30px;
+            width: 100%; /* Span full width */
+            flex-basis: 100%;
+        }
+
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #f4f4f4;
+            text-align: center;
+            padding: 25px 0; /* More padding */
+            margin-top: 0; /* Remove margin as last section has padding */
+             border-top: 3px solid #0056b3; /* Accent line */
+        }
+
+        footer p {
+            margin-bottom: 8px; /* Space between lines */
+            font-size: 0.9rem;
+        }
+         footer p:last-child {
+             margin-bottom: 0;
+         }
+        footer a {
+            color: #87cefa; /* Light sky blue links */
+            text-decoration: none;
+        }
+         footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design Adjustments */
+        @media (min-width: 769px) { /* Apply side-by-side layout on larger screens */
+            #hero .hero-content {
+                flex-direction: row; /* Side-by-side */
+                justify-content: space-between; /* Space between image and text */
+                text-align: left; /* Align text left */
+                gap: 40px; /* Space between image and text */
+            }
+            #hero .hero-image-container {
+                flex-basis: 35%; /* Image takes ~35% width */
+                max-width: 300px; /* Limit image size */
+                margin-bottom: 0; /* Remove bottom margin */
+            }
+            #hero .hero-text-container {
+                 flex-basis: 60%; /* Text takes ~60% width */
+            }
+             #hero h2, #hero p {
+                 margin-left: 0; /* Remove auto margins */
+                 margin-right: 0;
+             }
+        }
+
+
+        @media (max-width: 768px) {
+            .logo h1 {
+                font-size: 1.3rem;
+                margin-bottom: 10px;
+                text-align: center;
+                width: 100%;
+            }
+
+            header .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul {
+                justify-content: center;
+                padding-left: 0;
+            }
+             nav ul li {
+                margin: 5px 5px;
+            }
+
+            #hero h2 {
+                font-size: 1.8rem;
+            }
+             #hero p {
+                font-size: 1rem;
+            }
+            #hero img {
+                max-width: 180px; /* Adjust size for mobile */
+            }
+
+            section h2 {
+                font-size: 1.6rem;
+            }
+
+            #arak ul, #kapcsolat .contact-details, #kapcsolat .opening-hours {
+                padding: 20px; /* Adjust padding */
+                flex-basis: 100%; /* Stack contact boxes */
+                 max-width: none; /* Remove max width */
+            }
+             #arak li {
+                 align-items: flex-start; /* Align price below item */
+                 flex-direction: column;
+            }
+            #arak .price {
+                 margin-top: 5px;
+                 margin-left: 0;
+            }
+
+            #kapcsolat .contact-flex-container {
+                 gap: 20px; /* Reduce gap */
+            }
+             #kapcsolat .contact-details, #kapcsolat .opening-hours {
+                 text-align: center; /* Center text in boxes */
+             }
+             #kapcsolat li {
+                display: flex; /* Better alignment for hours */
+                justify-content: center;
+                gap: 10px;
+             }
+        }
+
+         @media (max-width: 480px) {
+            html {
+                 font-size: 15px;
+            }
+            .btn {
+                 padding: 10px 20px;
+                 font-size: 0.95rem;
+            }
+            nav ul li a {
+                padding: 5px 8px;
+                font-size: 0.9rem;
+            }
+            #szolgaltatasok summary {
+                font-size: 1rem;
+                 padding: 12px 40px 12px 15px; /* Adjust padding */
+            }
+            #szolgaltatasok .service-content {
+                 padding: 15px;
+            }
+             #hero h2 {
+                 font-size: 1.6rem;
+             }
+              #hero p {
+                 font-size: 0.95rem;
+             }
+             #kapcsolat h3 {
+                 font-size: 1.3rem;
+             }
+             #kapcsolat p, #kapcsolat ul {
+                 font-size: 1rem;
+             }
+             #arak li {
+                 font-size: 0.95rem;
+             }
+             #arak .price {
+                 font-size: 1rem;
+             }
+         }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <!-- SEO: Include keywords -->
+                <h1>Dr. Valcsev Penyu - Magán Szemészet Miskolc</h1>
+            </div>
+            <nav>
+                <ul>
+                    <!-- Links to sections -->
+                    <li><a href="#hero">Kezdőlap</a></li>
+                    <li><a href="#szolgaltatasok">Szolgáltatások</a></li>
+                    <li><a href="#arak">Árak</a></li>
+                    <li><a href="#velemenyek">Vélemények</a></li>
+                    <li><a href="#kapcsolat">Kapcsolat</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-image-container">
+                        <!-- IMAGE OPTIMIZATION -->
+                        <picture>
+                           <!-- Offer WebP format -->
+                           <source srcset="dr-photo.webp" type="image/webp">
+                           <!-- Fallback to JPG -->
+                           <source srcset="dr-photo.jpg" type="image/jpeg">
+                           <!-- Actual image tag -->
+                           <img src="dr-photo.jpg"
+                                alt="Dr. Valcsev Penyu - Szemész szakorvos Miskolc"
+                                width="400" height="500"
+                                >
+                                <!-- Note: loading="lazy" is NOT used here as it's above the fold -->
+                        </picture>
+                    </div>
+                    <div class="hero-text-container">
+                         <!-- SEO: H2 includes keywords and location -->
+                         <h2>Üdvözöljük Dr. Valcsev Penyu miskolci magán szemészeti rendelésén!</h2>
+                         <p>Tapasztalt szemész szakorvosként teljeskörű ellátást nyújtok pácienseim számára, modern diagnosztikai eszközökkel Miskolc szívében.</p>
+                         <!-- Call to Action Button -->
+                         <a href="#kapcsolat" class="btn">Időpontfoglalás</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="szolgaltatasok">
+            <div class="container">
+                <h2>Szolgáltatásaink</h2>
+                <!-- SEO: Using details/summary is fine, content is indexable -->
+                <!-- Service Details Accordions (Keep the same structure as before) -->
+                <details class="service-item">
+                    <summary>Szemész szakorvosi vizsgálat</summary>
+                    <div class="service-content">
+                        <p>A vizsgálat során szemész szakorvosunk konzultáció keretében megismeri az Ön aktuális panaszait...</p>
+                    </div>
+                </details>
+                 <details class="service-item">
+                    <summary>Szemészeti szakellátás akut és krónikus betegek részére</summary>
+                     <div class="service-content">
+                         <h4>AKUT ellátás:</h4>
+                         <p>Hirtelen fellépő szemészeti problémák esetében forduljon hozzánk bizalommal...</p>
+                         <ul><li>hirtelen fellépő szemfájdalom...</li><li>hirtelen fellépő látásromlás...</li><li>szem bármely területén tapasztalt akut elváltozás</li></ul>
+                         <h4>KRÓNIKUS ellátás:</h4>
+                         <p>Pácienseink szemészeti betegségeinek folyamatos gondozását tartjuk az egyik fő feladatunknak...</p>
+                     </div>
+                </details>
+                <details class="service-item">
+                    <summary>Glaucoma szemészeti gondozása</summary>
+                     <div class="service-content">
+                        <p>A glaucoma (zöldhályog) lényege a látóideg fokozatos sorvadása...</p>
+                    </div>
+                </details>
+                 <details class="service-item">
+                    <summary>Diabetes szemészeti gondozása</summary>
+                     <div class="service-content">
+                        <p>A cukorbetegség hazánkban a lakosság közel 10%-át érinti...</p>
+                         <p>A szemfenéken kívül egyéb területeken is gyakran okoz szemészeti elváltozásokat a cukorbetegség. Ezek:</p>
+                         <ul><li>visszatérő árpa</li><li>szaruhártyafekély</li><li>glaukóma (zöldhályog)</li><li>katarakta (szürkehályog)</li><li>látóideg sorvadása</li><li>szemmozgás-zavarok</li><li>pupilla működési zavarai</li></ul>
+                        <p>Várjuk cukorbeteg pácienseinket szemorvosi vizsgálatunkon...</p>
+                    </div>
+                </details>
+                <details class="service-item">
+                    <summary>Időskori macula degeneráció (AMD) gondozása</summary>
+                     <div class="service-content">
+                         <p>A szemfenéken található macula (sárgafolt) elfajulása az ötven év feletti lakosság egyhatodát érinti...</p>
+                     </div>
+                </details>
+                <details class="service-item">
+                    <summary>Szemfenéki diagnosztika OCT vizsgálattal</summary>
+                     <div class="service-content">
+                         <p>Optikai koherencia tomográfiás (OCT) vizsgálat: Alapja a hullámvisszaverődés elvén nyugszik...</p>
+                     </div>
+                </details>
+                 <details class="service-item">
+                    <summary>Gyermekek szemészeti szűrővizsgálata</summary>
+                     <div class="service-content">
+                         <p>Gyermekek vizsgálatát 0 éves kortól vállaljuk...</p>
+                     </div>
+                </details>
+                 <details class="service-item">
+                    <summary>Alkalmassági vizsgálatok (Sport, Munka, Jogosítvány)</summary>
+                     <div class="service-content">
+                         <h4>Sportorvosi szemészeti vizsgálat:</h4> <p>Hazánkban sportegyesületi (“leigazolt”) tagként versenyezni...</p>
+                         <h4>Munkaalkalmassági vizsgálat (Képernyős munka):</h4> <p>„Beutalás képernyő előtti munkavégzéshez kapcsolódó szemészeti szakvizsgálatra”...</p>
+                         <h4>Gépjármű vezetői engedély-alkalmassági vizsgálat:</h4> <p>Első gépjármű vezetői engedély megszerzésének ill. meglévő engedély meghosszabbításának...</p>
+                         <ul><li>látásélesség</li><li>szem fénytörési hibáinak megállapítása</li><li>színtévesztés</li><li>szemkáprázás</li><li>látótér zavarai</li><li>kettős-látás</li></ul>
+                     </div>
+                </details>
+                <details class="service-item">
+                    <summary>POLATESZT VIZSGÁLAT (Rejtett kancsalság szűrése)</summary>
+                     <div class="service-content">
+                         <h4>Mi az a polateszt?</h4> <p>A polateszt egy olyan speciális vizsgálati módszer...</p>
+                         <h4>Milyen tünetek jelezhetik a rejtett kancsalságot?</h4> <p>A szempár együttműködésének zavarát sok esetben nem jelzi...</p>
+                         <h4>Hogyan történik a polateszt vizsgálat?</h4> <p>A polateszt a szempár együttműködését, a szemizmok egyensúlyát vizsgálja...</p>
+                         <h4>Milyen megoldást segít elő a polateszt vizsgálat?</h4> <p>A vizsgálat alapján megállapíthatók azok a korrekciós értékek...</p>
+                     </div>
+                </details>
+                <!-- End Service Accordions -->
+            </div>
+        </section>
+
+        <section id="arak">
+            <div class="container">
+                <h2>Áraink</h2>
+                <small>Érvényes: 2025. január 1-től</small>
+                <ul>
+                    <li> <span>Szemészeti szakvizsgálat (látásvizsgálat, elülső szegmentum vizsgálata, szemfenék vizsgálata, tensio mérés)</span> <span class="price">22.000 Ft</span> </li>
+                    <li> <span>Kontroll vizsgálat (3 hónapon belül)</span> <span class="price">17.000 Ft</span> </li>
+                    <li> <span>Kontroll vizsgálat (10 napon belül)</span> <span class="price">12.000 Ft</span> </li>
+                    <li> <span>Szemész főorvosi konzultáció</span> <span class="price">17.000 Ft</span> </li>
+                    <li> <span>OCT vizsgálat (leletezéssel)</span> <span class="price">20.000 Ft</span> </li>
+                    <li> <span>OCT vizsgálat (leletezés nélkül)</span> <span class="price">15.000 Ft</span> </li>
+                    <li> <span>Szemészeti ultrahang</span> <span class="price">10.000 Ft</span> </li>
+                </ul>
+                <div class="discount-note">
+                    Amennyiben a vizsgálat során felírt szemüveget üzletünkben készítteti, a szemüvegkészítés árából <strong>3.000 Ft kedvezményt</strong> nyújtunk.
+                </div>
+            </div>
+        </section>
+
+        <section id="velemenyek">
+            <div class="container">
+                <h2>Pácienseink Mondták</h2>
+                <!-- Placeholder Reviews (Replace with real ones) -->
+                <div class="testimonial"><blockquote>Nagyon alapos volt a doktor úr, mindent részletesen elmagyarázott. Modern műszerekkel vizsgált, és végre jó szemüveget kaptam. Csak ajánlani tudom!</blockquote><p class="author">- Kovács Anna, Miskolc (Helyőrző)</p></div>
+                <div class="testimonial"><blockquote>Régóta fennálló problémámra itt találtam megoldást. Kedves, figyelmes ellátásban volt részem, a rendelő tiszta és barátságos. Köszönöm!</blockquote><p class="author">- Nagy Péter, Kazincbarcika (Helyőrző)</p></div>
+                <div class="testimonial"><blockquote>Gyorsan kaptam időpontot, és a vizsgálat is gördülékenyen ment. A Polateszt vizsgálat sokat segített a fejfájásomon.</blockquote><p class="author">- Kiss Éva, Miskolc (Helyőrző)</p></div>
+               
+            </div>
+        </section>
+
+        <section id="kapcsolat">
+            <div class="container">
+                <h2>Kapcsolat és Időpontfoglalás</h2>
+                <div class="contact-flex-container">
+                    <div class="contact-details">
+                         <h3>Elérhetőségek</h3>
+                         <p><span class="label">Cím:</span>
+                            Kazinczy Ferenc u. 14, <br>
+                            Miskolc, 3525 - Major-Minor optika<br>
+                        </p>
+                         <p><span class="label">Telefon (Időpontfoglalás):</span>
+                            <a href="tel:+3646786636" class="phone-link">46/ 786-636</a>
+                         </p>
+                        
+                    </div>
+                    <div class="opening-hours"> <!-- Assuming you might add this back later -->
+                        <h3>Rendelési Idő</h3>
+                        <ul>
+                            <li><strong>Hétfő:</strong> 9:00 - 13:00</li>
+                            <li><strong>Kedd:</strong> 14:30 - 18:00 </li>
+                            <li><strong>Szerda:</strong> 9:00 - 18:00 </li>
+                            <li><strong>Csütörtök:</strong> Nem elérhető</li>
+                            <li><strong>Péntek:</strong> 14:30 - 18:00 </li>
+                        </ul>
+                        <p class="appointment-info">Vizsgálat kizárólag előzetes telefonos időpont egyeztetés alapján történik.</p>
+                   </div>
+                    <div class="appointment-button-container">
+                         <a href="tel:+3646786636" class="btn btn-phone">Időpontfoglalás Telefonon</a>
+                    </div>
+                </div>
+            </div>
+            <div class="map-container" style="margin-top: 40px; border-radius: 8px; overflow: hidden; box-shadow: 0 3px 8px rgba(0,0,0,0.1);">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2670.898777788088!2d20.78181867688886!3d48.10305897124188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4740a009e8a77c7b%3A0x8a77c7b0e8a77c7b!2sMiskolc%2C%20Kazinczy%20Ferenc%20u.%2014%2C%203525%20Hungary!5e0!3m2!1sen!2sus!4v1678886655443!5m2!1sen!2sus"
+                    width="100%"
+                    height="350" /* Increased height slightly */
+                    style="border:0; display: block;" /* Added display: block to remove potential bottom space */
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Rendelőnk elhelyezkedése Miskolcon">
+                </iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© <script>document.write(new Date().getFullYear());</script> Dr. Valcsev Penyu Magán Szemészet Miskolc. Minden jog fenntartva.</p>
+            <p>Cím: Kazinczy Ferenc u. 14, Miskolc, 3525 | Telefon: <a href="tel:+36000000000">46/ 786-636</a></p>
+            <!-- Optional: <p><a href="/adatvedelem">Adatvédelmi tájékoztató</a></p> -->
+        </div>
+    </footer>
+
+</body>
+</html>
